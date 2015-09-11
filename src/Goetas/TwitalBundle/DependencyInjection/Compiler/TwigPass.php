@@ -1,13 +1,12 @@
 <?php
+
 namespace Goetas\TwitalBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
- *
  * @author Martin Hasoň <martin.hason@gmail.com>
- *
  */
 class TwigPass implements CompilerPassInterface
 {
@@ -18,4 +17,3 @@ class TwigPass implements CompilerPassInterface
         $container->setDefinition('twig.loader', $twitalLoader);
     }
 }
-

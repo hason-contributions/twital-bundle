@@ -1,17 +1,15 @@
 <?php
+
 namespace Goetas\TwitalBundle\Assetic\Resource;
 
 use Assetic\Factory\Resource\ResourceInterface;
 use Goetas\Twital\TwitalLoader;
 
 /**
- *
  * @author Asmir Mustafic <goetas@gmail.com>
- *
  */
 class TwitalResource implements ResourceInterface
 {
-
     private $loader;
 
     private $resource;
@@ -26,7 +24,7 @@ class TwitalResource implements ResourceInterface
     {
         $source = $this->resource->getContent();
 
-        if ($adapter = $this->loader->getSourceAdapter(strval($this->resource))) {
+        if ($adapter = $this->loader->getSourceAdapter((string) $this->resource)) {
             $source = $this->loader->getTwital()->compile($adapter, $source);
         }
 
@@ -40,6 +38,6 @@ class TwitalResource implements ResourceInterface
 
     public function __toString()
     {
-        return strval($this->resource);
+        return (string) $this->resource;
     }
 }

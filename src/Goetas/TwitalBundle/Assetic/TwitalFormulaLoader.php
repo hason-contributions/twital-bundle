@@ -1,20 +1,17 @@
 <?php
+
 namespace Goetas\TwitalBundle\Assetic;
 
 use Assetic\Factory\Resource\ResourceInterface;
 use Assetic\Extension\Twig\TwigFormulaLoader;
-use Goetas\Twital\Twital;
 use Goetas\Twital\TwitalLoader;
 use Goetas\TwitalBundle\Assetic\Resource\TwitalResource;
 
 /**
- *
  * @author Asmir Mustafic <goetas@gmail.com>
- *
  */
 class TwitalFormulaLoader extends TwigFormulaLoader
 {
-
     private $twital;
 
     public function __construct(TwitalLoader $twital, \Twig_Environment $twig)

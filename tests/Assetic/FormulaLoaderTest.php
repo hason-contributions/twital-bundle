@@ -2,9 +2,7 @@
 namespace Goetas\TwitalBundle\Tests\Assetic;
 
 use Goetas\TwitalBundle\Assetic\TwitalFormulaLoader;
-use Goetas\Twital\Twital;
 use Goetas\Twital\TwitalLoader;
-use Goetas\TwitalBundle\Assetic\Resource\TwitalResource;
 
 class TwigFormulaLoaderTest extends \PHPUnit_Framework_TestCase
 {
@@ -15,8 +13,8 @@ class TwigFormulaLoaderTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->twig = new \Twig_Environment();
         $this->twitalLoader = new TwitalLoader();
+        $this->twig = new \Twig_Environment($this->twitalLoader);
     }
 
     public function testMixture()

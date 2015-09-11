@@ -8,10 +8,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\TwigBundle\TwigEngine;
 
 /**
- *
  * @author Asmir Mustafic <goetas@gmail.com>
  * @author Martin Hasoň <martin.hason@gmail.com>
- *
  */
 class TwitalEngine implements EngineInterface
 {

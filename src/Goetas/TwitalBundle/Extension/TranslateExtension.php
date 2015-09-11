@@ -1,4 +1,5 @@
 <?php
+
 namespace Goetas\TwitalBundle\Extension;
 
 use Goetas\Twital\Extension\AbstractExtension;
@@ -7,17 +8,14 @@ use Goetas\TwitalBundle\Attribute;
 use Goetas\TwitalBundle\EventSubscriber\WhiteSpaceRemovalSubscriber;
 
 /**
- *
  * @author Asmir Mustafic <goetas@gmail.com>
- *
  */
 class TranslateExtension extends AbstractExtension
 {
-
     public function getSubscribers()
     {
         return array(
-            new WhiteSpaceRemovalSubscriber(array(), array('http://www.w3.org/1999/xhtml'))
+            new WhiteSpaceRemovalSubscriber(array(), array('http://www.w3.org/1999/xhtml')),
         );
     }
 

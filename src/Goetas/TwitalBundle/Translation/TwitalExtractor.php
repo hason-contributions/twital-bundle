@@ -1,18 +1,17 @@
 <?php
+
 namespace Goetas\TwitalBundle\Translation;
 
 use Symfony\Bridge\Twig\Translation\TwigExtractor;
 use Goetas\Twital\TwitalLoader;
 use Symfony\Component\Translation\MessageCatalogue;
 use Symfony\Component\Finder\Finder;
+
 /**
- *
  * @author Asmir Mustafic <goetas@gmail.com>
- *
  */
 class TwitalExtractor extends TwigExtractor
 {
-
     protected $twital;
 
     public function __construct(\Twig_Environment $twig, TwitalLoader $twital)
@@ -22,7 +21,7 @@ class TwitalExtractor extends TwigExtractor
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function extract($directory, MessageCatalogue $catalogue)
     {

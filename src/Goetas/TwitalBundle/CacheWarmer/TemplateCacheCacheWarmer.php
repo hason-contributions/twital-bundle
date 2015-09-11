@@ -6,7 +6,6 @@ use Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinderInterface;
 
-
 class TemplateCacheCacheWarmer implements CacheWarmerInterface
 {
     protected $container;
@@ -35,7 +34,6 @@ class TemplateCacheCacheWarmer implements CacheWarmerInterface
      */
     public function warmUp($cacheDir)
     {
-
         $twitalLoader = $this->container->get('twital.loader');
         $twig = $this->container->get('twig');
 
@@ -44,7 +42,6 @@ class TemplateCacheCacheWarmer implements CacheWarmerInterface
         $twig->setLoader($twitalLoader);
 
         foreach ($this->finder->findAllTemplates() as $template) {
-
             if ('twital' !== $template->get('engine')) {
                 continue;
             }
@@ -60,7 +57,7 @@ class TemplateCacheCacheWarmer implements CacheWarmerInterface
     /**
      * Checks whether this warmer is optional or not.
      *
-     * @return bool    always true
+     * @return bool always true
      */
     public function isOptional()
     {
